@@ -49,6 +49,8 @@
   background-color: blueviolet;
   color: white;
   margin: 3px;
+  cursor: pointer;
+  transition: all ease 0.35s;
 }
 .todoitemsOuter {
   border-radius: 4px;
@@ -80,4 +82,7 @@
 #trash:hover {
   background-color: rgb(36, 36, 36);
   color: white;
+}
+.addbtn:hover {
+  opacity: 0.9;
 }
