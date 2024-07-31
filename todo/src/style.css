@@ -2,12 +2,52 @@ body {
   margin: 0;
   padding: 0;
   font-family: serif;
+  overflow-x: hidden;
+}
+nav {
+  z-index: 1;
+  position: absolute;
+  width: 80%;
+  margin: 30px 10%;
+  background-color: rgba(198, 198, 198, 0.599);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+nav .logo {
+  font-size: 50px;
+  font-weight: bold;
+  font-style: oblique;
+  color: rgb(156, 5, 237);
+}
+nav .navItems {
+  width: 450px;
+  display: flex;
+  justify-content: space-around;
+}
+nav .navItems a {
+  font-family: cursive;
+  transition: all ease 0.35s;
+  font-size: 20px;
+  padding: 10px;
+  margin: 1px;
+  text-decoration: none;
+  border-radius: 7px;
+  color: rgb(255, 255, 255);
+}
+nav .navItems a:hover {
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
 }
 .frontpage {
+  color: white;
+  color: rgba(255, 255, 255, 0.726);
   width: 100vw;
   min-height: 100vh;
-  background-image: url("./images/background.jpg");
+  background-image: url("./images/182428240217.jpg");
   background-position: center;
+  /*  background-attachment: fixed */
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -15,10 +55,11 @@ body {
   justify-content: center;
 }
 .frontpage h1 {
+  font-family: cursive;
   font-size: 70px;
 }
 .frontpage .frontData {
-  min-height: 300px;
+  min-height: 290px;
   line-height: 30px;
   font-size: 18px;
   display: flex;
@@ -27,10 +68,13 @@ body {
   justify-content: space-around;
 }
 .frontTxt {
-  width: 600px;
+  font-family: cursive;
+  width: 500px;
   text-align: center;
 }
 .frontData button {
+  font-family: cursive;
+  margin-top: 50px;
   padding: 10px 30px;
   font-size: 18px;
   border: none;
@@ -38,10 +82,84 @@ body {
   cursor: pointer;
   color: rgb(255, 255, 255);
   transition: all ease 0.35s;
-  background-color: rgba(0, 0, 0, 0.726);
+  background-color: transparent;
+  border: 1px solid rgba(252, 252, 252, 0.726);
 }
 
 .frontData button:hover {
-  background-color: black;
-  color: rgb(255, 157, 0);
+  border: 1px solid rgba(128, 26, 196, 0.726);
+  background-color: rgba(128, 26, 196, 0.726);
+}
+.frontcreative {
+  font-size: 100px;
+  color: blueviolet;
+}
+
+/* About */
+
+.about {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(219, 219, 219);
+  width: 90vw;
+  margin: 20px auto;
+  min-height: 80vh;
+  border-radius: 5px;
+}
+.aboutTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 600px;
+  height: 300px;
+  margin: 10px;
+  /*   background-color: aqua; */
+}
+.aboutHeading {
+  font-family: cursive;
+  color: blueviolet;
+  font-size: 17px;
+  font-weight: bold;
+}
+.about-small {
+  /*  color: blueviolet; */
+  font-size: 40px;
+  font-family: cursive;
+  font-weight: bold;
+}
+.about-small span {
+  color: blueviolet;
+}
+.bigTxt {
+  margin-top: 30px;
+}
+.aboutimg {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0.3px 0.5px 0.5px 0.3 grey;
+}
+
+.aboutimg img {
+  border-radius: 10px;
+  width: 100%;
+}
+.socialBtn {
+  margin: 30px;
+  margin-left: 0;
+}
+.gitlink {
+  cursor: pointer;
+  background-color: blueviolet;
+  padding: 8px 15px;
+  border-radius: 3px;
+  color: white;
+  margin: 6px;
+  transition: all ease 0.35s;
+}
+.gitlink:hover {
+  opacity: 0.7;
 }
