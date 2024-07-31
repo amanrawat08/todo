@@ -158,6 +158,7 @@ nav .navItems a:hover {
   border-radius: 3px;
   color: white;
   margin: 6px;
+  text-decoration: none;
   transition: all ease 0.35s;
 }
 .gitlink:hover {

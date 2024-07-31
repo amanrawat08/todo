@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="navItems">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#todo">Todo List</a>
         <a href="#blog">Blog</a>
         <a href="#contract">Contract</a>
       </div>

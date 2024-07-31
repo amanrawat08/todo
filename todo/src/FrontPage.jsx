@@ -30,8 +30,20 @@ export function FrontPage() {
             perferendis, quo explicabo blanditiis voluptas similique pariatur.
           </div>
           <div className="socialBtn">
-            <a className="gitlink">GitHub Account</a>
-            <a className="gitlink">Linkdin Account</a>
+            <a
+              className="gitlink"
+              href="https://github.com/amanrawat08"
+              target="blank"
+            >
+              GitHub Account
+            </a>
+            <a
+              className="gitlink"
+              href="https://www.linkedin.com/in/aman-rawat-767550252"
+              target="blank"
+            >
+              Linkdin Account
+            </a>
           </div>
         </div>
         <div className="aboutimg">

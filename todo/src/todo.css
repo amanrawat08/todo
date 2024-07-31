@@ -1,16 +1,22 @@
 .todoOuter {
-  min-height: 100vh;
-  width: 91vw;
-  border-radius: 10px;
-  margin: 20px auto;
+  min-height: 90vh;
+  width: 100vw;
   background-color: rgb(219, 219, 219);
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("./images/todobgbgb.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .formOuter {
   padding: 10px;
-  background-color: rgb(230, 46, 46);
+  background-image: url("./images/todobg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +25,9 @@
   min-height: 400px;
 }
 .todoHead {
-  color: blueviolet;
+  /* color: blueviolet;*/
+  margin-bottom: 20px;
+  color: white;
   font-weight: bold;
   font-size: 30px;
   font-family: cursive;
@@ -56,12 +64,30 @@
   border-radius: 4px;
   width: 90%;
   margin: 20px auto;
-  height: 300px;
+  height: 350px;
   overflow: auto;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
+.zeroItem {
+  background-color: rgba(240, 248, 255, 0.405);
+  border-radius: 4px;
+  width: 90%;
+  margin: 20px auto;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: cursive;
+  color: white;
 }
 .item {
+  margin: 10px;
   margin-bottom: 10px;
-  padding: 7px 3px;
+  padding: 7px 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -69,6 +95,7 @@
   border-radius: 10px;
 }
 .item-txt {
+  font-size: 22px;
   width: 400px;
 }
 
@@ -85,4 +112,71 @@
 }
 .addbtn:hover {
   opacity: 0.9;
+}
+.contract {
+  min-height: 90vh;
+  width: 90vw;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(219, 219, 219);
+}
+.conLeft,
+.conRight {
+  width: 500px;
+  height: 500px;
+}
+.conLeft {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  /* background-color: rgba(181, 181, 181, 0.399); */
+  align-items: end;
+  justify-content: center;
+}
+.conRight {
+  background-image: url("./images/contract.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-bottom: 22px;
+}
+.contractHeading {
+  margin-bottom: 100px;
+  width: 100%;
+  font-size: 40px;
+  color: blueviolet;
+  font-weight: bold;
+  font-family: cursive;
+}
+.leftItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  justify-content: space-evenly;
+  padding: 10px;
+  /*   border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px; */
+  background-color: rgba(254, 244, 254, 0.783);
+  width: 300px;
+}
+.contractus {
+  border: none;
+  padding: 8px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: white;
+  transition: all ease 0.45s;
+  cursor: pointer;
+}
+.contractus:hover {
+  background-color: black;
 }

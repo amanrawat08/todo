@@ -5,8 +5,14 @@ import axios from "axios";
 export default function Todo() {
   const [inputTxt, setInputTxt] = useState("");
   const [listData, setListData] = useState([]);
+  const [state, setState] = useState(0);
   const inputValue = (e) => {
     setInputTxt(e.target.value);
+  };
+  const reloading = () => {
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
   const addbtn = (e) => {
     fetch("http://localhost:3000/todo", {
@@ -15,15 +21,21 @@ export default function Todo() {
         name: inputTxt,
       }),
     });
-
-    window.location.reload();
+    setState(state + 1);
+    reloading();
   };
   useEffect(() => {
     axios
       .get("http://localhost:3000/todo")
       .then((res) => setListData(res.data));
-    console.log(listData);
-  });
+  }, ["listData", "inputTxt"]);
+
+  const deletebtn = (id) => {
+    axios.delete(`http://localhost:3000/todo/${id}`, listData);
+    setState(state - 1);
+    reloading();
+  };
+
   return (
     <div className="todoOuter">
       <div className="formOuter">
@@ -40,12 +52,18 @@ export default function Todo() {
         </div>
         <div className="todoitemsOuter">
           {listData.map((item, index) => (
-            <div className="item">
-              <div className="item-txt">{item.name}</div>
-              <i id="trash" className="fa fa-trash" aria-hidden="true"></i>
+            <div className="item" key={index}>
+              <li className="item-txt">{item.name}</li>
+              <i
+                id="trash"
+                onClick={() => deletebtn(item.id)}
+                className="fa fa-trash"
+                aria-hidden="true"
+              ></i>
             </div>
           ))}
         </div>
+        <div style={{ color: "white" }}>ar7541147@gmail.com</div>
       </div>
     </div>
   );
