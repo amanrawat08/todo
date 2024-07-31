@@ -1,5 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./todo.css";
-export default function todo() {
-  return <div className="todoOuter"></div>;
+
+export default function Todo() {
+  const [inputTxt, setInputTxt] = useState("");
+  const inputValue = (e) => {
+    setInputTxt(e.target.value);
+  };
+  const addbtn = (e) => {
+    setInputTxt("");
+  };
+  return (
+    <div className="todoOuter">
+      <div className="formOuter">
+        <div className="todoHead">T0DO LIST</div>
+        <div className="inputdiv">
+          <input
+            type="text"
+            placeholder="Enter The Task"
+            onChange={inputValue}
+          />
+          <button onClick={addbtn}>Add</button>
+        </div>
+        <div className="todoitemsOuter"></div>
+      </div>
+    </div>
+  );
 }
