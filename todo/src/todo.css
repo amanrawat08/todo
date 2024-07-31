@@ -1,9 +1,11 @@
 .todoOuter {
   min-height: 90vh;
   width: 100vw;
+  padding: 5px;
   background-color: rgb(219, 219, 219);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   background-image: url("./images/todobgbgb.png");
   background-position: center;

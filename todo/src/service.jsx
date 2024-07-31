@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./todo.css";
 import axios from "axios";
+import recording from "./images/record.mp4";
 export default function Todo() {
   const [inputTxt, setInputTxt] = useState("");
   const [listData, setListData] = useState([]);
@@ -65,6 +66,14 @@ export default function Todo() {
         </div>
         <div style={{ color: "white" }}>ar7541147@gmail.com</div>
       </div>
+
+      <video
+        style={{ width: "500px", height: "300px", borderRadius: "10px" }}
+        src={recording}
+        controls
+        muted
+        autoPlay
+      ></video>
     </div>
   );
 }
