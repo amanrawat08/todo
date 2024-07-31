@@ -7,7 +7,7 @@ export default function Todo() {
     setInputTxt(e.target.value);
   };
   const addbtn = (e) => {
-    setInputTxt("");
+    console.log(inputTxt);
   };
   return (
     <div className="todoOuter">
