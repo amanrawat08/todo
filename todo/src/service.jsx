@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import "./todo.css";
-
 export default function Todo() {
   const [inputTxt, setInputTxt] = useState("");
   const inputValue = (e) => {
     setInputTxt(e.target.value);
   };
-  const addbtn = (e) => {
-    console.log(inputTxt);
-  };
+  const addbtn = (e) => {};
   return (
     <div className="todoOuter">
       <div className="formOuter">
@@ -21,7 +18,15 @@ export default function Todo() {
           />
           <button onClick={addbtn}>Add</button>
         </div>
-        <div className="todoitemsOuter"></div>
+        <div className="todoitemsOuter">
+          <div className="item">
+            <div className="item-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
+              numquam.
+            </div>
+            <i id="trash" className="fa fa-trash" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
     </div>
   );
