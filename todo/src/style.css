@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+.frontpage {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("./images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frontpage h1 {
+  font-size: 70px;
+}
+.frontpage .frontData {
+  min-height: 300px;
+  line-height: 30px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.frontTxt {
+  width: 600px;
+  text-align: center;
+}
+.frontData button {
+  padding: 10px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  transition: all ease 0.35s;
+  background-color: rgba(0, 0, 0, 0.726);
+}
+
+.frontData button:hover {
+  background-color: black;
+  color: rgb(255, 157, 0);
+}
