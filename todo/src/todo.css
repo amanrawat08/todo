@@ -116,7 +116,7 @@
   opacity: 0.9;
 }
 .contract {
-  min-height: 90vh;
+  min-height: 60vh;
   width: 90vw;
   margin: 20px auto;
   display: flex;
@@ -135,6 +135,7 @@
   flex-direction: column;
   padding-left: 10px;
   /* background-color: rgba(181, 181, 181, 0.399); */
+  background-color: rgb(216, 216, 216);
   align-items: end;
   justify-content: center;
 }
