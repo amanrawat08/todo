@@ -70,7 +70,6 @@ export default function Todo() {
       <video
         style={{ width: "500px", height: "300px", borderRadius: "10px" }}
         src={recording}
-        controls
         muted
         autoPlay
       ></video>
